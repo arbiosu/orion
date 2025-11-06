@@ -51,8 +51,8 @@ const services: ServiceProps[] = [
 
 export default function Services() {
   return (
-    <section className='flex flex-col gap-4'>
-      <h3 className='font-slab text-center text-4xl md:text-6xl lg:text-8xl'>
+    <section className='flex flex-col gap-4 lg:px-20'>
+      <h3 className='font-main text-center text-4xl tracking-tighter sm:text-6xl'>
         Our Services
       </h3>
       <div className='grid w-full snap-x snap-mandatory auto-cols-max grid-flow-col overflow-x-auto overflow-y-hidden p-0 lg:auto-cols-auto lg:grid-flow-row lg:grid-cols-2 lg:gap-8 lg:overflow-visible lg:p-8'>
@@ -85,10 +85,12 @@ export function ServiceCard({ type, img, Icon }: ServiceProps) {
         unoptimized
       />
 
-      <div className='absolute inset-0 bg-black/50' />
+      <div className='absolute inset-0 bg-black/60' />
 
       <div className='relative flex flex-1 flex-col items-center justify-center p-6 text-center'>
-        <h3 className='font-main text-4xl font-semibold text-white'>{type}</h3>
+        <h3 className='font-main text-4xl font-medium tracking-tighter text-white'>
+          {type}
+        </h3>
         <Icon className='mt-4 h-20 w-20 text-white' />
       </div>
     </Card>
