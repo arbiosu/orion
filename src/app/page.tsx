@@ -3,6 +3,7 @@ import Services from '@/components/services';
 import About from '@/components/about';
 import Reviews from '@/components/reviews-carousel';
 import BentoGridGallery from '@/components/bento-image-grid';
+import QuoteForm from '@/components/quote-form';
 
 import { images } from '@/lib/constants';
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Services />
       <About />
       <Reviews />
+      <QuoteForm />
       <BentoGridGallery images={images} />
     </main>
   );

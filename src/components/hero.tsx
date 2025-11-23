@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { FileText } from 'lucide-react';
@@ -22,7 +20,7 @@ export default function Hero() {
             Surrounding Areas
           </p>{' '}
           <Button asChild size={'lg'} className='max-w-lg'>
-            <Link href='/'>
+            <Link href='/#quoteForm'>
               {' '}
               <FileText />
               Get A Free Quote
