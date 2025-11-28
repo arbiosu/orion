@@ -7,7 +7,8 @@ import Footer from '@/components/footer';
 
 export const metadata: Metadata = {
   title: 'Orion Remodeling & Handyman',
-  description: 'Licensed General Contractors Serving Monmouth County, NJ',
+  description:
+    'Licensed Home Improvement Contractors Serving Monmouth County, NJ',
 };
 
 export default function RootLayout({
