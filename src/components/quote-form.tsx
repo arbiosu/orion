@@ -132,7 +132,7 @@ export default function QuoteForm() {
     setFormStatus({ isLoading: true, error: null, success: null });
 
     try {
-      const res = await fetch('/api/email/quote', {
+      const res = await fetch('/api/email/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

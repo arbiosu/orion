@@ -9,7 +9,7 @@ export const images = [
     src: '/kitchen.jpeg',
     alt: 'Kitchen by Orion Remodeling & Handyman',
     title: 'Kitchen Renovation',
-    className: 'aspect-[2/1] col-span-2',
+    className: 'aspect-[2/1] md:col-span-2',
   },
   {
     src: '/b-reno-1.jpeg',
@@ -51,7 +51,7 @@ export const images = [
     src: '/f-reno-1.jpeg',
     alt: 'Fence Renovation',
     title: 'Fence Renovation',
-    className: 'aspect-square md:aspect-[4/1] col-span-3',
+    className: 'aspect-square md:aspect-[4/1] md:col-span-3',
   },
   {
     src: '/f-reno-1-2.jpeg',
@@ -135,6 +135,6 @@ export const images = [
     src: '/renovation.jpeg',
     alt: 'Renovation by Orion Remodeling & Handyman',
     title: 'Living Room Renovation',
-    className: 'aspect-[2/1] col-span-2',
+    className: 'aspect-[2/1] md:col-span-2',
   },
 ];
