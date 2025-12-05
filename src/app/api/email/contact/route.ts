@@ -103,7 +103,7 @@ export async function POST(req: Request) {
       from: `Orion Handyman and Remodeling <${FROM_EMAIL}>`,
       to: TO_EMAIL,
       subject: `${EMAIL_SUBJECT_PREFIX}: ${safeSubject}`,
-      html: `        <p><strong>From:</strong> ${safeName} (${safeEmail})</p>
+      html: `<p><strong>From:</strong> ${safeName} (${safeEmail})</p>
         <p><strong>Subject:</strong> ${safeSubject}</p>
         <p><strong>Message:</strong> ${safeMessage}</p>
         <hr>
