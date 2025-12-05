@@ -4,8 +4,8 @@ import { cookies } from 'next/headers';
 import { z } from 'zod';
 
 const EMAIL_SUBJECT_PREFIX = 'New Quote Request:';
-const FROM_EMAIL = process.env.CONTACT_FORM_FROM_EMAIL;
-const TO_EMAIL = process.env.CONTACT_FORM_TO_EMAIL;
+const FROM_EMAIL = process.env.FROM_EMAIL;
+const TO_EMAIL = process.env.TO_EMAIL;
 
 const RATE_LIMIT = 3;
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour in milliseconds
