@@ -106,9 +106,7 @@ export async function POST(req: Request) {
       html: `<p><strong>From:</strong> ${safeName} (${safeEmail})</p>
         <p><strong>Subject:</strong> ${safeSubject}</p>
         <p><strong>Message:</strong> ${safeMessage}</p>
-        <hr>
-        <p><strong>Message:</strong></p>
-        <p>${safeMessage}</p>`,
+        <hr>`,
     });
     if (error) {
       console.error('Resend API error:', error);
