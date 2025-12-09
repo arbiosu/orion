@@ -25,8 +25,8 @@ export default function Hero() {
           </p>
           <p className='text-base sm:text-xl'>
             Proudly Serving{' '}
-            <span className='font-extrabold'>Monmouth County</span> &
-            Surrounding Areas
+            <span className='font-extrabold'>Howell Township, New Jersey</span>{' '}
+            & Surrounding Areas
           </p>{' '}
           <Button asChild size={'lg'} className='max-w-lg'>
             <Link href='/#quoteForm'>
