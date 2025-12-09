@@ -13,7 +13,10 @@ interface BentoProps {
 
 export default function BentoGridGallery({ images }: BentoProps) {
   return (
-    <section className='font-main container mx-auto max-w-full px-4 tracking-tighter'>
+    <section
+      id='projects'
+      className='font-main container mx-auto max-w-full px-4 tracking-tighter'
+    >
       <h3 className='font-main mb-4 text-center text-4xl sm:text-6xl'>
         Our Projects
       </h3>
