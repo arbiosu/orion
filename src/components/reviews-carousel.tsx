@@ -49,8 +49,11 @@ export default function Reviews() {
     ));
   };
   return (
-    <section className='font-main flex flex-col items-center justify-center gap-4 px-10 tracking-tighter'>
-      <h3 className='text-center text-4xl sm:text-6xl'>What Our Clients Say</h3>
+    <section
+      id='testimonials'
+      className='font-main flex flex-col items-center justify-center gap-4 px-10 tracking-tighter'
+    >
+      <h3 className='text-center text-4xl sm:text-6xl'>Client Testimonials</h3>
       <Carousel
         opts={{
           align: 'start',

@@ -1,5 +1,7 @@
 import Hero from '@/components/hero';
+import SocialLinks from '@/components/social-links';
 import Services from '@/components/services';
+import ServiceArea from '@/components/service-area';
 import About from '@/components/about';
 import Reviews from '@/components/reviews-carousel';
 import BentoGridGallery from '@/components/bento-image-grid';
@@ -11,8 +13,12 @@ export default function Home() {
   return (
     <main className='flex flex-col gap-12'>
       <Hero />
+      <SocialLinks />
       <Services />
-      <About />
+      <div className='flex-col items-center justify-center'>
+        <About />
+        <ServiceArea />
+      </div>
       <Reviews />
       <QuoteForm />
       <BentoGridGallery images={images} />

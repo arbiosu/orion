@@ -55,7 +55,7 @@ export default function Services() {
       <h3 className='font-main text-center text-4xl tracking-tighter sm:text-6xl'>
         Our Services
       </h3>
-      <div className='grid w-full snap-x snap-mandatory auto-cols-max grid-flow-col overflow-x-auto overflow-y-hidden p-0 lg:auto-cols-auto lg:grid-flow-row lg:grid-cols-2 lg:gap-8 lg:overflow-visible lg:p-8'>
+      <div className='grid w-full snap-x snap-mandatory auto-cols-max grid-flow-col overflow-x-auto overflow-y-hidden p-0 lg:auto-cols-auto lg:grid-flow-row lg:grid-cols-3 lg:gap-8 lg:overflow-visible lg:p-8'>
         {services.map((service, index) => (
           <div
             key={index}
@@ -75,7 +75,7 @@ export default function Services() {
 
 export function ServiceCard({ type, img, Icon }: ServiceProps) {
   return (
-    <Card className='relative flex h-[400px] w-full flex-col overflow-hidden rounded-4xl shadow-lg'>
+    <Card className='relative flex h-[400px] w-full flex-col overflow-hidden rounded-4xl shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-white'>
       <Image
         src={img}
         alt={type}
@@ -85,10 +85,10 @@ export function ServiceCard({ type, img, Icon }: ServiceProps) {
         unoptimized
       />
 
-      <div className='absolute inset-0 bg-black/60' />
+      <div className='absolute inset-0 bg-black/70' />
 
       <div className='relative flex flex-1 flex-col items-center justify-center p-6 text-center'>
-        <h3 className='font-main text-4xl font-medium tracking-tighter text-white'>
+        <h3 className='font-main text-4xl tracking-tighter text-white'>
           {type}
         </h3>
         <Icon className='mt-4 h-20 w-20 text-white' />

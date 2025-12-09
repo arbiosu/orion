@@ -1,7 +1,10 @@
 export default function About() {
   return (
-    <section className='font-main flex flex-col items-center justify-center gap-4 px-4 tracking-tighter'>
-      <h3 className='text-center text-4xl sm:text-6xl'>Who We Are</h3>
+    <section
+      id='about'
+      className='font-main flex flex-col items-center justify-center gap-4 px-4 tracking-tighter'
+    >
+      <h3 className='text-center text-4xl sm:text-6xl'>About Us</h3>
       <div className='flex max-w-2xl flex-col gap-4'>
         <p className='text-xl'>
           We transform homes into havens, specializing in both{' '}
