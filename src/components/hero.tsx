@@ -4,6 +4,8 @@ import { Button } from './ui/button';
 import { FileText } from 'lucide-react';
 import LicenseCard from './license-card';
 
+import { Phone } from 'lucide-react';
+
 export default function Hero() {
   return (
     <section className='font-main relative flex items-center justify-center overflow-hidden text-center tracking-tighter'>
@@ -27,14 +29,30 @@ export default function Hero() {
             Proudly Serving{' '}
             <span className='font-extrabold'>Howell Township, New Jersey</span>{' '}
             & Surrounding Areas
-          </h6>{' '}
-          <Button asChild size={'lg'} className='max-w-lg'>
-            <Link href='/#quoteForm'>
-              {' '}
-              <FileText />
-              Get A Free Quote
-            </Link>
-          </Button>
+          </h6>
+          <div className='flex gap-4'>
+            <Button asChild size={'lg'} className='max-w-lg'>
+              <Link href='/#quoteForm'>
+                {' '}
+                <FileText />
+                Get A Free Quote
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size={'lg'}
+              className='max-w-lg bg-blue-700 text-white'
+            >
+              <Link
+                href='tel:+17324927646'
+                className='flex items-center gap-3 text-sm transition-colors'
+              >
+                <Phone size={18} />
+                <span>(732) 492-7646</span>
+              </Link>
+            </Button>
+          </div>
+
           <LicenseCard />
         </div>
       </div>
