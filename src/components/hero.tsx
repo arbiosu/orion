@@ -20,14 +20,14 @@ export default function Hero() {
           <h1 className='text-4xl font-bold drop-shadow-lg sm:text-6xl'>
             Orion Remodeling & Handyman
           </h1>
-          <p className='text-lg sm:text-2xl'>
+          <h6 className='text-lg sm:text-2xl'>
             Expert Remodeling & Handyman Services
-          </p>
-          <p className='text-base sm:text-xl'>
+          </h6>
+          <h6 className='text-base sm:text-xl'>
             Proudly Serving{' '}
             <span className='font-extrabold'>Howell Township, New Jersey</span>{' '}
             & Surrounding Areas
-          </p>{' '}
+          </h6>{' '}
           <Button asChild size={'lg'} className='max-w-lg'>
             <Link href='/#quoteForm'>
               {' '}
