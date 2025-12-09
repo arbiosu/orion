@@ -58,7 +58,7 @@ export default function Reviews() {
         opts={{
           align: 'start',
         }}
-        className='w-full max-w-7xl'
+        className='w-full max-w-4xl'
       >
         <CarouselContent>
           {reviews.map((review, index) => (
