@@ -1,3 +1,5 @@
+import { type IconName } from './icons';
+
 export const images = [
   {
     src: '/shed.jpeg',
@@ -136,5 +138,50 @@ export const images = [
     alt: 'Living room renovation completed by Orion Remodeling & Handyman featuring upgraded flooring and finishes',
     title: 'Living Room Renovation',
     className: 'aspect-[2/1] md:col-span-2',
+  },
+];
+
+export const services = [
+  {
+    id: 1,
+    title: 'Carpentry',
+    subtitle: '',
+    bgImage: '/carpentry.jpeg',
+    icon: 'Hammer' as IconName,
+  },
+  {
+    id: 2,
+    title: 'Plumbing',
+    subtitle: '',
+    bgImage: '/plumbing.jpeg',
+    icon: 'Wrench' as IconName,
+  },
+  {
+    id: 3,
+    title: 'Electrical',
+    subtitle: '',
+    bgImage: '/electrical.jpeg',
+    icon: 'Zap' as IconName,
+  },
+  {
+    id: 4,
+    title: 'Painting',
+    subtitle: '',
+    bgImage: '/painting.jpeg',
+    icon: 'Paintbrush' as IconName,
+  },
+  {
+    id: 5,
+    title: 'Maintenance',
+    subtitle: '',
+    bgImage: '/maintenance.jpeg',
+    icon: 'Shovel' as IconName,
+  },
+  {
+    id: 6,
+    title: 'And More!',
+    subtitle: '',
+    bgImage: '/construction.jpeg',
+    icon: 'HardHat' as IconName,
   },
 ];
