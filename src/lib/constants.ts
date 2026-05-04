@@ -185,3 +185,27 @@ export const services = [
     icon: 'HardHat' as IconName,
   },
 ];
+
+export const reviews = [
+  {
+    id: 1,
+    name: 'Ashley Viera',
+    text: 'This company has great attention to detail, the work ethic is amazing and so is the communication. Will definitely recommend trying this service if ur looking to renovate or remodel, great quality service for a fair price !',
+    rating: 5,
+    avatar: 'AV',
+  },
+  {
+    id: 2,
+    name: 'Iryna Stupak',
+    text: "It’s amazing how you can get many services done by this business. We had an excellent work done in our house! Years ago, my family had to call other people to get things done but now, we are gonna be calling these guys only!!! Won't stop recommending!",
+    rating: 5,
+    avatar: 'IS',
+  },
+  {
+    id: 3,
+    name: 'Eric Freeman',
+    text: 'Gherson did a fantastic job adding some rooms and a bathroom in my basement. Very fast work, very good communication. Highly recommended.',
+    rating: 5,
+    avatar: 'EF',
+  },
+];

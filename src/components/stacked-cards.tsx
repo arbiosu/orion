@@ -69,7 +69,7 @@ export default function StackedCards({
             <p className='mb-2 text-xs tracking-tight text-neutral-500 uppercase'>
               {overline}
             </p>
-            <h2 className='text-4xl md:text-6xl'>{heading}</h2>
+            <h6 className='text-4xl tracking-tighter md:text-6xl'>{heading}</h6>
           </div>
           <div className='flex gap-2'>
             <Button
