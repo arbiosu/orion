@@ -1,9 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, useCallback } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import Heading from './heading';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { IconName, iconMap } from '@/lib/icons';
 
@@ -12,7 +13,7 @@ interface Content {
   title: string;
   subtitle: string;
   icon: IconName;
-  bgImage: string | null;
+  bgImage?: string;
 }
 
 interface StackedCardsProps {
@@ -29,48 +30,57 @@ export default function StackedCards({
   const scrollerRef = useRef<HTMLDivElement | null>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
+  const onScroll = useCallback(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+
+    const children = Array.from(el.children) as HTMLElement[];
+    const scrollMid = el.scrollLeft + el.clientWidth / 2;
+
+    let closest = 0;
+    let minDist = Infinity;
+
+    children.forEach((child, i) => {
+      const cardMid = child.offsetLeft + child.offsetWidth / 2;
+      const dist = Math.abs(scrollMid - cardMid);
+
+      if (dist < minDist) {
+        minDist = dist;
+        closest = i;
+      }
+    });
+
+    setActiveIndex((prev) => (prev !== closest ? closest : prev));
+  }, []);
+
   useEffect(() => {
     const el = scrollerRef.current;
     if (!el) return;
 
-    const onScroll = () => {
-      const children = Array.from(el.children) as HTMLElement[];
-      const scrollMid = el.scrollLeft + el.clientWidth / 2;
-      let closest = 0;
-      let minDist = Infinity;
-      children.forEach((child, i) => {
-        const cardMid = child.offsetLeft + child.offsetWidth / 2;
-        const dist = Math.abs(scrollMid - cardMid);
-        if (dist < minDist) {
-          minDist = dist;
-          closest = i;
-        }
-      });
-      setActiveIndex(closest);
-    };
-
     el.addEventListener('scroll', onScroll, { passive: true });
     return () => el.removeEventListener('scroll', onScroll);
-  }, [cards]);
+  }, [onScroll]);
 
   const scrollTo = (index: number) => {
     const el = scrollerRef.current;
     if (!el) return;
+
     const card = el.children[index] as HTMLElement;
     if (!card) return;
-    el.scrollTo({ left: card.offsetLeft - 24, behavior: 'smooth' });
+
+    const containerCenter = el.clientWidth / 2;
+    const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+
+    const scrollLeft = cardCenter - containerCenter;
+
+    el.scrollTo({ left: scrollLeft, behavior: 'smooth' });
   };
 
   return (
     <div className='font-main w-full px-6 py-16'>
       <div className='mx-auto max-w-6xl'>
         <div className='mb-10 flex items-end justify-between'>
-          <div>
-            <p className='mb-2 text-xs tracking-tight text-neutral-500 uppercase'>
-              {overline}
-            </p>
-            <h6 className='text-4xl tracking-tighter md:text-6xl'>{heading}</h6>
-          </div>
+          <Heading overline={overline} headingText={heading} />
           <div className='flex gap-2'>
             <Button
               variant='outline'
@@ -98,7 +108,7 @@ export default function StackedCards({
         {/* Horizontal scroll container */}
         <div
           ref={scrollerRef}
-          className='scrollbar-hide -mx-6 flex snap-x snap-mandatory gap-6 overflow-x-auto px-6 pb-6'
+          className='scrollbar-hide -mx-6 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-6'
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {cards.map((card, i) => {
@@ -112,23 +122,23 @@ export default function StackedCards({
                 style={{
                   transform: isActive
                     ? 'scale(1) translateY(0)'
-                    : `scale(${0.92 - Math.min(Math.abs(offset) * 0.04, 0.16)}) translateY(${Math.min(Math.abs(offset) * 12, 32)}px)`,
+                    : `scale(${0.92 - Math.min(Math.abs(offset) * 0.001, 0.16)}) translateY(${Math.min(Math.abs(offset) * 12, 32)}px)`,
                   opacity: isActive
                     ? 1
                     : 0.5 + Math.max(0, 0.3 - Math.abs(offset) * 0.1),
                   zIndex: cards.length - Math.abs(offset),
                 }}
               >
-                <Card className='h-[480px] w-[320px] overflow-hidden border-0 p-0 shadow-2xl md:w-[400px]'>
+                <Card className='h-[480px] w-[320px] overflow-hidden rounded-3xl border-0 p-0 shadow-2xl md:w-[400px]'>
                   <Image
                     src={card.bgImage ?? '/placeholder.svg'}
                     alt={card.title}
                     fill
-                    className='object-cover'
+                    className='rounded-3xl object-cover'
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                     unoptimized
                   />
-                  <div className='absolute inset-0 bg-black/40' />
+                  <div className='absolute inset-0 rounded-3xl bg-black/40' />
 
                   <div className={`relative h-full w-full`}>
                     <CardContent className='relative flex h-full flex-col justify-between p-8 text-white'>

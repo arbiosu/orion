@@ -198,7 +198,7 @@ export default function QuoteForm() {
         </CardTitle>
         <p className='mt-1.5 text-sm leading-relaxed text-zinc-500'>
           {
-            "Tell us about your project and we'll get back to you within one business day."
+            "Tell us about your project and we'll get back to you as soon as possible."
           }
         </p>
       </CardHeader>
@@ -335,7 +335,7 @@ export default function QuoteForm() {
             </Button>
 
             <p className='text-center text-xs text-zinc-400'>
-              No commitment required · Responds within 24 hours
+              No commitment required · Responds quickly
             </p>
           </div>
         </form>

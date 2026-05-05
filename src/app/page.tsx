@@ -2,7 +2,7 @@ import Hero from '@/components/hero';
 import SocialLinks from '@/components/social-links';
 import ServiceArea from '@/components/service-area';
 import About from '@/components/about';
-import Reviews from '@/components/reviews-carousel';
+import Reviews from '@/components/reviews';
 import BentoGridGallery from '@/components/bento-image-grid';
 import QuoteForm from '@/components/quote-form';
 import StackedCards from '@/components/stacked-cards';

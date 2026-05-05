@@ -17,16 +17,16 @@ export default function ServiceArea() {
       <div className='mx-auto max-w-6xl'>
         <div>
           <p className='mb-2 text-xs tracking-tight text-neutral-500 uppercase'>
-            Our Service Area
+            Service Area
           </p>
           <h6 className='mb-4 text-4xl tracking-tighter md:text-6xl'>
-            Our Service Area
+            Serving Howell, NJ and Surrounding Area
           </h6>
-          <p>Counties...</p>
         </div>
         <div className='flex justify-center'>
           <div className='aspect-4/3 w-full max-w-2xl'>
             <div className='relative h-full w-full'>
+              <div className='absolute inset-0 z-10 cursor-default' />
               <ServiceAreaMap />
             </div>
           </div>
