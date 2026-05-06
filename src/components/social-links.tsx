@@ -3,13 +3,7 @@
 import type React from 'react';
 
 import Link from 'next/link';
-import {
-  Card,
-  CardTitle,
-  CardHeader,
-  CardDescription,
-  CardContent,
-} from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { Facebook, Star, Home, Award, CheckCircle2 } from 'lucide-react';
 
 interface SocialLink {
