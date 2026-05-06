@@ -78,7 +78,7 @@ export default function StackedCards({
 
   return (
     <div className='font-main w-full px-6 py-16'>
-      <div className='mx-auto max-w-6xl'>
+      <div className='mx-auto max-w-6xl p-4'>
         <div className='mb-10 flex items-end justify-between'>
           <Heading overline={overline} headingText={heading} />
           <div className='flex gap-2'>
