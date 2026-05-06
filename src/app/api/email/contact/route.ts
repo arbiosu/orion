@@ -1,7 +1,7 @@
-import { resend } from '@/lib/resend/resend';
 import { NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 import { z } from 'zod';
+import { Resend } from 'resend';
 
 const EMAIL_SUBJECT_PREFIX = 'New Quote Request:';
 const FROM_EMAIL = process.env.FROM_EMAIL;
@@ -92,6 +92,7 @@ export async function POST(req: Request) {
       { status: 400 }
     );
   }
+  const resend = new Resend(process.env.RESEND_SECRET_KEY!);
 
   try {
     const safeName = escapeHtml(body.name);
