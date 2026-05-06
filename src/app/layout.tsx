@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
 import { dmSans } from '../../public/fonts/font';
 import './globals.css';
-import Header from '@/components/header';
+import { Navbar } from '@/components/nav';
 import Footer from '@/components/footer';
 
 export const metadata: Metadata = {
@@ -72,7 +72,7 @@ export default function RootLayout({
           defaultTheme='system'
           disableTransitionOnChange
         >
-          <Header />
+          <Navbar />
           {children}
           <Footer />
         </ThemeProvider>

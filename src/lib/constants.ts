@@ -1,3 +1,5 @@
+import { type IconName } from './icons';
+
 export const images = [
   {
     src: '/shed.jpeg',
@@ -136,5 +138,74 @@ export const images = [
     alt: 'Living room renovation completed by Orion Remodeling & Handyman featuring upgraded flooring and finishes',
     title: 'Living Room Renovation',
     className: 'aspect-[2/1] md:col-span-2',
+  },
+];
+
+export const services = [
+  {
+    id: 1,
+    title: 'Carpentry',
+    subtitle: '',
+    bgImage: '/carpentry.jpeg',
+    icon: 'Hammer' as IconName,
+  },
+  {
+    id: 2,
+    title: 'Plumbing',
+    subtitle: '',
+    bgImage: '/plumbing.jpeg',
+    icon: 'Wrench' as IconName,
+  },
+  {
+    id: 3,
+    title: 'Electrical',
+    subtitle: '',
+    bgImage: '/electrical.jpeg',
+    icon: 'Zap' as IconName,
+  },
+  {
+    id: 4,
+    title: 'Painting',
+    subtitle: '',
+    bgImage: '/painting.jpeg',
+    icon: 'Paintbrush' as IconName,
+  },
+  {
+    id: 5,
+    title: 'Maintenance',
+    subtitle: '',
+    bgImage: '/maintenance.jpeg',
+    icon: 'Shovel' as IconName,
+  },
+  {
+    id: 6,
+    title: 'And More!',
+    subtitle: '',
+    bgImage: '/construction.jpeg',
+    icon: 'HardHat' as IconName,
+  },
+];
+
+export const reviews = [
+  {
+    id: 1,
+    name: 'Ashley Viera',
+    text: 'This company has great attention to detail, the work ethic is amazing and so is the communication. Will definitely recommend trying this service if ur looking to renovate or remodel, great quality service for a fair price !',
+    rating: 5,
+    avatar: 'AV',
+  },
+  {
+    id: 2,
+    name: 'Iryna Stupak',
+    text: "It’s amazing how you can get many services done by this business. We had an excellent work done in our house! Years ago, my family had to call other people to get things done but now, we are gonna be calling these guys only!!! Won't stop recommending!",
+    rating: 5,
+    avatar: 'IS',
+  },
+  {
+    id: 3,
+    name: 'Eric Freeman',
+    text: 'Gherson did a fantastic job adding some rooms and a bathroom in my basement. Very fast work, very good communication. Highly recommended.',
+    rating: 5,
+    avatar: 'EF',
   },
 ];
